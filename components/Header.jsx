@@ -74,7 +74,7 @@ function Header({ placeholder }) {
           <div
             className="flex cursor-pointer items-center space-x-2 rounded-2xl border p-2 shadow-sm transition ease-in hover:scale-105 hover:shadow-md active:scale-95"
             onClick={() => {
-              session ? signOut() : signIn();
+              session && signOut();
             }}
           >
             <MenuAlt2Icon className="h-6 w-6" />
