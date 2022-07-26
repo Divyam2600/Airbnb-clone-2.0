@@ -88,7 +88,7 @@ function Header({ placeholder }) {
                 />
               </div>
             ) : (
-              <UserCircleIcon className="h-6 w-6" />
+              <UserCircleIcon className="h-8 w-8" />
             )}
           </div>
         </div>
