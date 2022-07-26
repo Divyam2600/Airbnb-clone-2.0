@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
   GlobeAltIcon,
+  LogoutIcon,
   MenuAlt2Icon,
   SearchIcon,
   UsersIcon,
@@ -13,7 +14,7 @@ import "react-date-range/dist/theme/default.css";
 import { DateRangePicker } from "react-date-range";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
 import Image from "next/image";
 
 function Header({ placeholder }) {
@@ -21,6 +22,8 @@ function Header({ placeholder }) {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [numberOfGuests, setNumberOfGuests] = useState(1);
+  const [active, setActive] = useState(false);
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
   const selectionRange = {
     startDate: startDate,
@@ -74,7 +77,7 @@ function Header({ placeholder }) {
           <div
             className="flex cursor-pointer items-center space-x-2 rounded-2xl border p-2 shadow-sm transition ease-in hover:scale-105 hover:shadow-md active:scale-95"
             onClick={() => {
-              session && signOut();
+              session && setActive(!active);
             }}
           >
             <MenuAlt2Icon className="h-6 w-6" />
@@ -93,6 +96,22 @@ function Header({ placeholder }) {
           </div>
         </div>
       </header>
+      {active && (
+        <div className="relative z-[60]" >
+          <p
+            className="fixed right-4 -mt-2 flex cursor-pointer items-center rounded-lg border-2 bg-white px-5 py-2 text-lg font-semibold text-gray-700 shadow-md transition duration-300 ease-in-out hover:scale-105 active:scale-95 "
+            onClick={() => {
+              setLoading(true);
+              setTimeout(() => {
+                signOut();
+              }, 1000);
+            }}
+          >
+            <LogoutIcon className="mr-2 -mt-[2px] h-7 w-7 text-airbnb" />
+            {loading ? "Logging Out..." : "Logout"}
+          </p>
+        </div>
+      )}
       {searchInput && (
         <div className="z-50 flex flex-col">
           <DateRangePicker
