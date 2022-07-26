@@ -6,9 +6,18 @@
     "start": "next start"
   },
   "dependencies": {
+    "@badrap/bar-of-progress": "^0.2.1",
+    "@heroicons/react": "^1.0.6",
+    "@tailwindcss/line-clamp": "^0.4.0",
+    "date-fns": "^2.29.1",
+    "geolib": "^3.3.3",
+    "mapbox-gl": "^2.9.2",
     "next": "latest",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-date-range": "^1.4.0",
+    "react-dom": "18.1.0",
+    "react-map-gl": "^7.0.18",
+    "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {
     "@types/node": "17.0.35",
@@ -16,6 +25,8 @@
     "@types/react-dom": "18.0.5",
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.12",
     "tailwindcss": "^3.1.2",
     "typescript": "4.7.2"
   }

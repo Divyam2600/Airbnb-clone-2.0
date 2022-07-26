@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: Cereal;
+  src: url("../assets/font/AirbnbCereal_light.otf"),
+    url(../assets/font/AirbnbCereal_normal.otf),
+    url(../assets/font/AirbnbCereal_medium.otf),
+    url(../assets/font/AirbnbCereal_bold.otf),
+    url(../assets/font/AirbnbCereal_extra_bold.otf);
+}
+
+@layer base {
+  html {
+    font-family: Cereal, system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .filter-button {
+    @apply transform cursor-pointer rounded-full border px-4 py-2 text-center text-sm font-semibold text-gray-800 text-opacity-80 shadow-md transition duration-150 ease-out hover:scale-105 active:scale-95;
+  }
+}

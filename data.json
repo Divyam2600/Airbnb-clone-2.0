@@ -1,0 +1,32 @@
+{
+  "amenities": [
+    {
+      "key": "TV",
+      "name": "Smart TV"
+    },
+    {
+      "key": "Wireless Internet",
+      "name": "Wifi"
+    },
+    {
+      "key": "Hair dryer",
+      "name": "Hair Dryer"
+    },
+    {
+      "key": "First aid kit",
+      "name": "First Aid Kit"
+    },
+    {
+      "key": "Fire extinguisher",
+      "name": "Fire Extinguisher"
+    },
+    {
+      "key": "Iron",
+      "name": "Iron"
+    },
+    {
+      "key": "Essentials",
+      "name": "Essentials"
+    }
+  ]
+}
