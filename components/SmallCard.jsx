@@ -3,7 +3,7 @@ import React from "react";
 
 function SmallCard({ image, distance, location }) {
   return (
-    <div className=" m-2 mt-5 flex cursor-pointer items-center space-x-4 rounded-xl transition ease-out hover:scale-105 hover:bg-gray-100 hover:bg-opacity-90">
+    <div className=" m-2 mt-5 flex cursor-pointer items-center space-x-4 rounded-xl transition ease-in-out hover:scale-105 hover:bg-gray-100 hover:bg-opacity-90">
       <div className="relative h-16 w-16">
         <Image src={image} layout="fill" className="rounded-lg" />
       </div>

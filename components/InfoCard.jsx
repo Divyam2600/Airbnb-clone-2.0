@@ -77,8 +77,8 @@ function InfoCard({
     });
   }
   return (
-    <div className="flex cursor-pointer rounded-xl border border-b border-gray-100 py-5 px-4 shadow-sm transition duration-200 ease-out hover:border-l-4 hover:border-l-airbnb hover:opacity-80 hover:shadow-md">
-      <div className="relative h-24 w-40 flex-shrink-0 transition duration-200 ease-in hover:scale-105 md:h-60 md:w-80">
+    <div className="flex cursor-pointer rounded-xl border border-b border-gray-100 py-5 px-4 shadow-sm transition duration-200 ease-in-out hover:border-l-4 hover:border-l-airbnb hover:opacity-80 hover:shadow-md">
+      <div className="relative h-24 w-40 flex-shrink-0 transition duration-200 ease-in-out hover:scale-105 md:h-60 md:w-80">
         <Image
           src={image}
           layout="fill"
@@ -92,9 +92,9 @@ function InfoCard({
           <p className="text-xs text-gray-400 sm:text-sm">{location}</p>
           <p onClick={() => setActive(!active)}>
             {active ? (
-              <HeartFilledIcon className="h-5 w-5 cursor-pointer text-airbnb transition duration-75 ease-in hover:scale-125 active:scale-75 sm:h-7 sm:w-7" />
+              <HeartFilledIcon className="h-5 w-5 cursor-pointer text-airbnb transition duration-75 ease-in-out hover:scale-125 active:scale-75 sm:h-7 sm:w-7" />
             ) : (
-              <HeartIcon className="h-5 w-5 cursor-pointer text-airbnb transition duration-75 ease-in hover:scale-125 active:scale-75 sm:h-7 sm:w-7" />
+              <HeartIcon className="h-5 w-5 cursor-pointer text-airbnb transition duration-75 ease-in-out hover:scale-125 active:scale-75 sm:h-7 sm:w-7" />
             )}
           </p>
         </div>
@@ -106,7 +106,7 @@ function InfoCard({
           {details}
         </p>
         <button
-          className="mt-3 -mb-2 flex w-32 rounded-xl border-2 border-airbnb px-4 py-2 font-semibold text-gray-700 transition  duration-100 ease-in hover:scale-105 hover:bg-airbnb hover:text-white active:scale-95"
+          className="mt-3 -mb-2 flex w-32 rounded-xl border-2 border-airbnb px-4 py-2 font-semibold text-gray-700 transition  duration-100 ease-in-out hover:scale-105 hover:bg-airbnb hover:text-white active:scale-95"
           onClick={navigate}
         >
           Read more...

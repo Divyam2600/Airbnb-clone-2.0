@@ -15,7 +15,7 @@ function LargeCard({ image, description, title, buttonText }) {
       <div className="absolute top-24 left-10 space-y-3 sm:top-28 md:left-12 md:top-32">
         <h3 className="w-64 text-4xl md:w-96">{title}</h3>
         <p>{description}</p>
-        <button className="rounded-xl bg-gray-800 px-4 py-2 text-sm text-white transition ease-in hover:scale-105 active:scale-95 ">
+        <button className="rounded-xl bg-gray-800 px-4 py-2 text-sm text-white transition ease-in-out hover:scale-105 active:scale-95 ">
           {buttonText}
         </button>
       </div>

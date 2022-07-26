@@ -75,7 +75,7 @@ function Header({ placeholder }) {
           </p>
           <GlobeAltIcon className="mr-1 hidden h-10 w-10 cursor-pointer rounded-full p-2 hover:bg-gray-200 hover:bg-opacity-40 sm:inline-flex" />
           <div
-            className="flex cursor-pointer items-center space-x-2 rounded-2xl border p-2 shadow-sm transition ease-in hover:scale-105 hover:shadow-md active:scale-95"
+            className="flex cursor-pointer items-center space-x-2 rounded-2xl border p-2 shadow-sm transition ease-in-out hover:scale-105 hover:shadow-md active:scale-95"
             onClick={() => {
               session && setActive(!active);
             }}

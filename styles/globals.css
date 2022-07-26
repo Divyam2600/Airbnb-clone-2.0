@@ -19,6 +19,6 @@
 
 @layer components {
   .filter-button {
-    @apply transform cursor-pointer rounded-full border px-4 py-2 text-center text-sm font-semibold text-gray-800 text-opacity-80 shadow-md transition duration-150 ease-out hover:scale-105 active:scale-95;
+    @apply transform cursor-pointer rounded-full border px-4 py-2 text-center text-sm font-semibold text-gray-800 text-opacity-80 shadow-md transition duration-150 ease-in-out hover:scale-105 active:scale-95;
   }
 }
