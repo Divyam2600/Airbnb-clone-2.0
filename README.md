@@ -13,13 +13,13 @@ This Airbnb clone has an Eye-Catching and Interactive UI with especially place s
 
 Current Features :
 
-<!-- <li>LogIn and SignUp with Validation</li> -->
+<li>LogIn with Google, Facebook, Github, Twitter</li>
 <li>Every Data pulled via OpenDataSet's Airbnb API </li>
 <!-- <li>SearchBar Modal with Suggestions</li> -->
 <li>Custom Details page of every place with every minute detail</li>
 <li>Interactive Map displaying location of searched places</li>
 <li>Custom Search</li>
-<!-- <li>Protected Routes</li> -->
+<li>Protected Routes</li>
 <br/>
 
 ## Next.js + Tailwind CSS
