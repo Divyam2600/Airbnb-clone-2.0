@@ -5,6 +5,7 @@ import SmallCard from "../components/SmallCard";
 import MediumCard from "../components/MediumCard";
 import LargeCard from "../components/LargeCard";
 import Footer from "../components/Footer";
+import { getSession } from "next-auth/react";
 
 const Home = ({ exploreData, cardsData }) => {
   return (
@@ -59,7 +60,8 @@ const Home = ({ exploreData, cardsData }) => {
 
 export default Home;
 
-export async function getStaticProps() {
+export async function getStaticProps(context) {
+  const session = await getSession(context);
   const exploreData = await fetch("https://links.papareact.com/pyp").then(
     (res) => res.json()
   );
@@ -70,6 +72,7 @@ export async function getStaticProps() {
     props: {
       exploreData,
       cardsData,
+      session,
     },
   };
 }

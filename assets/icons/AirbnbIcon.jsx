@@ -1,6 +1,6 @@
 import { createElement, forwardRef } from "react";
 
-function Icon(props, svgRef) {
+function AirbnbIcon(props, svgRef) {
   return /*#__PURE__*/ createElement(
     "svg",
     Object.assign(
@@ -23,5 +23,5 @@ function Icon(props, svgRef) {
   );
 }
 
-const ForwardRef = forwardRef(Icon);
+const ForwardRef = forwardRef(AirbnbIcon);
 module.exports = ForwardRef;

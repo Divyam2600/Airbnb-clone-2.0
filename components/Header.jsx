@@ -6,13 +6,15 @@ import {
   UsersIcon,
 } from "@heroicons/react/outline";
 import { UserCircleIcon } from "@heroicons/react/solid";
-import Icon from "../assets/icons/AirbnbIcon";
-import Logo from "../assets/icons/AirbnbLogo";
+import AirbnbIcon from "../assets/icons/AirbnbIcon";
+import AirbnbLogo from "../assets/icons/AirbnbLogo";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { DateRangePicker } from "react-date-range";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useSession, signIn, signOut } from "next-auth/react";
+import Image from "next/image";
 
 function Header({ placeholder }) {
   const [searchInput, setSearchInput] = useState("");
@@ -41,14 +43,15 @@ function Header({ placeholder }) {
       },
     });
   }
+  const { data: session } = useSession();
   return (
     <>
       <header className=" sticky top-0 z-50 flex grid-cols-3 justify-between space-x-1 border-b bg-white p-4  shadow-md md:px-6">
         {/* Left */}
         <Link href="/">
           <div className="-mb-5 flex h-12 cursor-pointer items-center object-contain ">
-            <Icon className="h-12 w-12" />
-            <Logo className="hidden h-10 w-20 md:inline-flex" />
+            <AirbnbIcon className="h-12 w-12" />
+            <AirbnbLogo className="hidden h-10 w-20 md:inline-flex" />
           </div>
         </Link>
         {/* Middle */}
@@ -68,10 +71,26 @@ function Header({ placeholder }) {
             Become A host
           </p>
           <GlobeAltIcon className="mr-1 hidden h-10 w-10 cursor-pointer rounded-full p-2 hover:bg-gray-200 hover:bg-opacity-40 sm:inline-flex" />
-          <p className="flex cursor-pointer items-center space-x-2 rounded-full border p-2 shadow-sm transition ease-in hover:scale-105 active:scale-95">
-            <MenuAlt2Icon className="h-5 w-5" />
-            <UserCircleIcon className="h-7 w-7 opacity-70" />
-          </p>
+          <div
+            className="flex cursor-pointer items-center space-x-2 rounded-2xl border p-2 shadow-sm transition ease-in hover:scale-105 hover:shadow-md active:scale-95"
+            onClick={() => {
+              session ? signOut() : signIn();
+            }}
+          >
+            <MenuAlt2Icon className="h-6 w-6" />
+            {session ? (
+              <div className="relative h-10 w-10">
+                <Image
+                  src={session.user.image}
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-full"
+                />
+              </div>
+            ) : (
+              <UserCircleIcon className="h-6 w-6" />
+            )}
+          </div>
         </div>
       </header>
       {searchInput && (

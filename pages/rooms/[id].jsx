@@ -113,28 +113,28 @@ function Details() {
                   <MapIcon className="h-5 w-5 text-airbnb" />
                   <p className="flex flex-col text-sm">
                     Book Right Now
-                    <p className="mt-[2px] text-[10px] font-normal leading-4 text-gray-400">
+                    <a className="mt-[2px] text-[10px] font-normal leading-4 text-gray-400">
                       This is one of the few places in {location}.
-                    </p>
+                    </a>
                   </p>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-700">
                   <StarIcon className="h-5 w-5 text-airbnb" />
                   <p className="flex flex-col text-sm">
                     Rating
-                    <p className="-mt-1 text-[10px] font-normal text-gray-400">
+                    <a className="-mt-1 text-[10px] font-normal text-gray-400">
                       {star * 20}% visitors have rated this place.
-                    </p>
+                    </a>
                   </p>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-700">
                   <BadgeCheckIcon className="h-5 w-5 text-airbnb" />
                   <p className="flex flex-col text-sm">
                     Experienced host
-                    <p className="-mt-1 text-[10px] font-normal text-gray-400">
+                    <a className="-mt-1 text-[10px] font-normal text-gray-400">
                       {hostName} has {parseInt(hostReviews, 10) + 100} reviews
                       for other places.
-                    </p>
+                    </a>
                   </p>
                 </div>
               </div>
@@ -211,7 +211,7 @@ function Details() {
                     {hostResponseRate}% Response Rate
                   </p>
                 </div>
-                {hostAbout.trim() != "" && (
+                {hostAbout?.trim() != "" && (
                   <p className="text-xs font-normal line-clamp-6">
                     {hostAbout}
                   </p>

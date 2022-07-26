@@ -1,5 +1,5 @@
-import React, { createElement } from "react";
-import displayAmenities from "../data.json";
+import React from "react";
+import data from "../data.json";
 import WifiIcon from "../assets/icons/WifiIcon";
 import TvIcon from "../assets/icons/TvIcon";
 import EssentialsIcon from "../assets/icons/EssentialsIcon";
@@ -10,7 +10,7 @@ import IronIcon from "../assets/icons/IronIcon";
 
 function Amenities({ amenities }) {
   amenities = amenities.split(",");
-  const filteredAmenities = displayAmenities.amenities.filter((value) => {
+  const filteredAmenities = data.displayAmenities.filter((value) => {
     return amenities.find((element) => {
       return element === value.key;
     });

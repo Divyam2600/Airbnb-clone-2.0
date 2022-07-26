@@ -6,6 +6,10 @@ module.exports = {
       "links.papareact.com",
       "public.opendatasoft.com",
       "a0.muscache.com",
+      "lh3.googleusercontent.com",
+      "avatars.githubusercontent.com",
+      "platform-lookaside.fbsbx.com",
+      "pbs.twimg.com",
     ],
   },
   env: {
