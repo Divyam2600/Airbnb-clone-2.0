@@ -1,4 +1,4 @@
-# Instagram 2.0
+# Airbnb Clone 2.0
 
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
@@ -8,7 +8,7 @@
 
 ### About The Build:
 
-This Airbnb clone has an Eye-Catching and Interactive UI with especially place search filter and MapBox integration with slick effect.
+This Airbnb clone has an Eye-Catching and Interactive UI with especially place search filter and MapBox integration with slick effect. Furthermore, custom Icons have been created and added.
 <br />
 
 Current Features :
@@ -51,12 +51,35 @@ npm run dev
 Open `.next.config.js` file then edit add this setting
 
 ```
-/** @type {import('next').NextConfig} */
 module.exports = {
   env: {
     mapbox_token:"YOUR TOKEN",
   },
 };
+
+```
+
+Create `.env.local` file add this keys
+
+```
+NEXTAUTH_URL=http://localhost:3000
+
+# GOOGLE KEYS
+GOOGLE_CLIENT_ID=key_goes_here
+GOOGLE_CLIENT_SECRET=key_goes_here
+
+# GITHUB KEYS
+GITHUB_CLIENT_ID=key_goes_here
+GITHUB_CLIENT_SECRET=key_goes_here
+
+# FACEBOOK KEYS
+FACEBOOK_CLIENT_ID=key_goes_here
+FACEBOOK_CLIENT_SECRET=key_goes_here
+
+# TWITTER KEYS
+TWITTER_CLIENT_ID=key_goes_here
+TWITTER_CLIENT_SECRET=key_goes_here
+TWITTER_CLIENT_BEARER_TOKEN=key_goes_here
 
 ```
 
