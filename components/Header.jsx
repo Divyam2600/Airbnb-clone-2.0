@@ -66,7 +66,9 @@ function Header({ placeholder }) {
           <input
             type="text"
             className="flex-1 bg-transparent pl-2 text-gray-600 outline-none"
-            placeholder={placeholder ? placeholder : "Start your Search..."}
+            placeholder={
+              placeholder ? placeholder : "Enter a City or Country..."
+            }
             value={searchInput}
             onChange={(event) => setSearchInput(event.target.value)}
           />
