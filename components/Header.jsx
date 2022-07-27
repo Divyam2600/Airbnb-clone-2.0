@@ -52,12 +52,12 @@ function Header({ placeholder }) {
   }
   const { data: session } = useSession();
   return (
-    <>
+    <div>
       <header className=" sticky top-0 z-50 flex grid-cols-3 justify-between space-x-1 border-b bg-white p-4  shadow-md md:px-6">
         {/* Left */}
         <Link href="/">
           <div
-            className={`-mb-5 flex h-12 cursor-pointer items-center object-contain ${
+            className={`-mb-5 -ml-3 flex h-12 cursor-pointer items-center object-contain xs:-ml-0 ${
               session && "child:mt-3"
             } `}
           >
@@ -66,13 +66,14 @@ function Header({ placeholder }) {
           </div>
         </Link>
         {/* Middle */}
-        <div className="my-auto flex h-12 max-w-xs flex-grow items-center rounded-full border-2 px-2 shadow-sm md:max-w-sm">
+        <div className="my-auto flex h-12 max-w-[200px] flex-grow items-center rounded-full border-2 px-2 shadow-sm md:max-w-sm xs:max-w-sm">
           <input
             type="text"
-            className="flex-1 bg-transparent pl-2 text-gray-600 outline-none"
+            className="flex-1 truncate bg-transparent pl-2 text-gray-600 outline-none"
             placeholder={
               placeholder ? placeholder : "Enter a City or Country..."
             }
+            disabled={!session && true}
             value={searchInput}
             onChange={(event) => setSearchInput(event.target.value)}
           />
@@ -130,10 +131,12 @@ function Header({ placeholder }) {
             minDate={new Date()}
             rangeColors={["#ff385c"]}
             onChange={handleSelect}
-            className="sm:mx-auto"
+            className="sm:mx-auto "
           />
           <div className="mx-auto flex w-full max-w-lg items-center justify-evenly space-x-28">
-            <h2 className="flex- text-3xl font-semibold">No Of Guests</h2>
+            <h2 className="text-xl font-semibold sm:text-3xl xs:text-2xl">
+              No Of Guests
+            </h2>
             <div className="flex items-center space-x-2">
               <UsersIcon className="h-7 w-7 text-gray-400" />
               <MinusCircleIcon
@@ -176,7 +179,7 @@ function Header({ placeholder }) {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
 

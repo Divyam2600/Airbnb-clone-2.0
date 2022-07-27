@@ -17,6 +17,9 @@ module.exports = {
       fontFamily: {
         sans: ["Cereal", ...defaultTheme.fontFamily.sans],
       },
+      screens: {
+        xs: "430px",
+      },
     },
   },
   variants: {

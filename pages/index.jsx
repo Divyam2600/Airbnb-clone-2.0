@@ -60,32 +60,15 @@ const Home = ({ exploreData, cardsData }) => {
 
 export default Home;
 
-// export async function getStaticProps(context) {
-//   const session = await getSession(context);
-//   const exploreData = await fetch("https://links.papareact.com/pyp").then(
-//     (res) => res.json()
-//   );
-//   const cardsData = await fetch("https://links.papareact.com/zp1").then((res) =>
-//     res.json()
-//   );
-//   return {
-//     props: {
-//       exploreData,
-//       cardsData,
-//       session,
-//     },
-//   };
-// }
-
 export async function getServerSideProps(context) {
   const session = await getSession(context);
-  if(!session){
-    return{
-      redirect:{
+  if (!session) {
+    return {
+      redirect: {
         permanent: false,
-        destination: "/signin"
-      }
-    }
+        destination: "/signin",
+      },
+    };
   }
   const exploreData = await fetch("https://links.papareact.com/pyp").then(
     (res) => res.json()

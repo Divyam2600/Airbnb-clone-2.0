@@ -4,10 +4,15 @@ import Footer from "../components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { HomeIcon } from "@heroicons/react/outline";
+import Head from "next/head";
 
 function Custom404() {
   return (
     <div>
+      <Head>
+        <title>Not-Found: Airbnb Clone</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Header />
       <div className="mx-auto max-w-lg px-5 pb-4">
         <div className="w-full text-center md:text-left">

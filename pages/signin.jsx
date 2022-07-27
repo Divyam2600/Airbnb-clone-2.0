@@ -10,7 +10,7 @@ import GitHubIcon from "../assets/icons/GitHubIcon";
 
 function SignIn({ providers }) {
   return (
-    <>
+    <div>
       <Header />
       <div className="flex h-screen flex-col items-center justify-center">
         <div className="-mt-20 space-y-4 rounded-xl border bg-white p-10 shadow-md">
@@ -52,7 +52,7 @@ function SignIn({ providers }) {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

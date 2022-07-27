@@ -3,7 +3,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="bottom-0 grid-cols-3 space-y-5 divide-y divide-gray-400 divide-opacity-70 bg-gray-200 p-4 child:mx-auto child:max-w-5xl md:grid md:gap-3 md:space-y-0 md:divide-y-0">
+    <footer className="bottom-0 max-w-xl grid-cols-3 space-y-5 divide-y divide-gray-400 divide-opacity-70 bg-gray-200 p-4 child:mx-auto child:max-w-5xl md:grid md:gap-3 md:space-y-0 md:divide-y-0">
       <div>
         <p className="flex-1 text-lg ">Support</p>
         <div className="grid grid-cols-3 space-y-2 text-xs capitalize child:cursor-pointer child-hover:underline md:block">
@@ -36,14 +36,19 @@ function Footer() {
       </div>
       <div className="col-span-full hidden h-[1px] w-full bg-gray-400 md:block"></div>
       <div className="col-span-3">
-        <div className="mt-4 flex items-center space-x-4 text-xs">
+        <div className="mx-auto mt-4 flex w-full items-center justify-center space-x-2 text-xs">
           <GlobeAltIcon className="-mr-2 h-5 w-5" />
           <p>English (EN)</p>
-          <div className=" flex list-disc space-x-4 child:cursor-pointer child-hover:underline">
-            <li>Privacy</li>
-            <li>Terms</li>
-            <li>Sitemap</li>
-            <li>Company details</li>
+          <div className=" flex list-disc child:cursor-pointer child-hover:underline">
+            <li>
+              <span className="relative -left-2">Privacy</span>
+            </li>
+            <li>
+              <span className="relative -left-2">Terms</span>
+            </li>
+            <li>
+              <span className="relative -left-2">Company Details</span>
+            </li>
           </div>
         </div>
         <p className="text-center text-sm">© 2022 Divyam</p>
