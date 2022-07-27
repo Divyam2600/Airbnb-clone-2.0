@@ -15,7 +15,7 @@ Current Features :
 
 <li>LogIn with Google, Facebook, Github, Twitter</li>
 <li>Every Data pulled via OpenDataSet's Airbnb API </li>
-<!-- <li>SearchBar Modal with Suggestions</li> -->
+<li>Calender Date picker on User Search Input</li>
 <li>Custom Details page of every place with every minute detail</li>
 <li>Interactive Map displaying location of searched places</li>
 <li>Custom Search</li>
