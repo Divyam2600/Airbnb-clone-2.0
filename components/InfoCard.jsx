@@ -118,7 +118,7 @@ function InfoCard({
             {star ? star : "4.4"}
           </p>
           <div className="">
-            <p className="text-xl font-semibold lg:text-2xl">
+            <p className="text-lg xs:text-xl -ml-2 xs:-ml-0 font-semibold lg:text-2xl">
               ${price} / night
             </p>
             <p className="text-right font-extralight">

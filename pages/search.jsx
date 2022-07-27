@@ -29,7 +29,7 @@ function Search({ searchResults }) {
     <div className="h-screen">
       <Header placeholder={placeholder} />
       <main className="flex max-w-full">
-        <section className="flex-1 px-6 pt-10">
+        <section className="flex-1 px-2 xs:px-6 pt-10">
           <p className="w-max rounded-md bg-gray-100 bg-opacity-40 py-2 px-4 text-xs capitalize shadow-sm">
             {`${filteredResults.length} ${
               filteredResults.length > 1 ? "stays" : "stay"
@@ -50,7 +50,7 @@ function Search({ searchResults }) {
             <p className="filter-button">Rooms and Beds</p>
             <p className="filter-button">More Filters</p>
           </div>
-          <div className="mx-2 flex flex-col space-y-3 overflow-y-scroll scroll-smooth pb-4 scrollbar-hide">
+          <div className="xs:mx-2 flex flex-col space-y-3 overflow-y-scroll scroll-smooth pb-4 scrollbar-hide">
             {filteredResults.map((item) => (
               <InfoCard
                 key={item.recordid}

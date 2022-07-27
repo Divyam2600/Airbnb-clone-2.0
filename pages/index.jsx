@@ -16,7 +16,7 @@ const Home = ({ exploreData, cardsData }) => {
       </Head>
       <Header />
       <Banner />
-      <main className="mx-auto mt-4 max-w-7xl space-y-4 px-8 sm:px-10 lg:px-16">
+      <main className="mx-auto mt-4 max-w-7xl space-y-4 px-4 xs:px-8 sm:px-10 lg:px-16">
         <section>
           <h2 className="py-5 text-2xl font-semibold md:text-3xl">
             Explore Nearby

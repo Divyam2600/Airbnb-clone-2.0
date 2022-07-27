@@ -66,7 +66,7 @@ function Header({ placeholder }) {
           </div>
         </Link>
         {/* Middle */}
-        <div className="my-auto flex h-12 max-w-[200px] flex-grow items-center rounded-full border-2 px-2 shadow-sm md:max-w-sm xs:max-w-sm">
+        <div className="my-auto flex h-12 max-w-[180px] flex-grow items-center rounded-full border-2 px-2 shadow-sm md:max-w-sm xs:max-w-sm">
           <input
             type="text"
             className="flex-1 truncate bg-transparent pl-2 text-gray-600 outline-none"

@@ -64,7 +64,7 @@ function Details() {
   return (
     <div className="h-screen">
       <Header placeholder={searchPlaceholder} />
-      <main className="mx-auto max-w-4xl px-5 py-3">
+      <main className="mx-auto max-w-4xl px-2 xs:px-5 py-3">
         <section className="font-semibold">
           {/* Header Section */}
           <p className="text-lg">{title}</p>
@@ -91,7 +91,7 @@ function Details() {
             />
           </div>
           {/* Middle Section */}
-          <div className="relative flex space-x-5">
+          <div className="relative flex space-x-2 xs:space-x-5">
             <div className=" space-y-4 divide-y">
               <div className="flex space-x-3 ">
                 <div className="flex-1">
