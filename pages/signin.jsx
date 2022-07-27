@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-import { getProviders, signIn } from "next-auth/react";
+import { signIn } from "next-auth/react";
 import AirbnbIcon from "../assets/icons/AirbnbIcon";
 import AirbnbLogo from "../assets/icons/AirbnbLogo";
 import GoogleIcon from "../assets/icons/GoogleIcon";
@@ -58,7 +58,8 @@ function SignIn({ providers }) {
 
 export default SignIn;
 
-export async function getServerSideProps(context) {
+import { getProviders } from "next-auth/react";
+export async function getServerSideProps() {
   const providers = await getProviders();
   return {
     props: { providers },
