@@ -113,7 +113,7 @@ function Details() {
               <div className="space-y-3 pt-3">
                 <div className="flex items-center space-x-3 text-gray-700">
                   <MapIcon className="h-7 w-7 text-airbnb xs:h-6 xs:w-6" />
-                  <p className="flex flex-col pl-[6px] text-xs">
+                  <p className="flex flex-col pl-[4px] xs:pl-0 text-xs xs:text-sm">
                     Book Right Now
                     <a className="text-[10px] font-normal leading-4 text-gray-400">
                       This is one of the few places in {location}.
