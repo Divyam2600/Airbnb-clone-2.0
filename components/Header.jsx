@@ -6,7 +6,11 @@ import {
   SearchIcon,
   UsersIcon,
 } from "@heroicons/react/outline";
-import { UserCircleIcon } from "@heroicons/react/solid";
+import {
+  MinusCircleIcon,
+  PlusCircleIcon,
+  UserCircleIcon,
+} from "@heroicons/react/solid";
 import AirbnbIcon from "../assets/icons/AirbnbIcon";
 import AirbnbLogo from "../assets/icons/AirbnbLogo";
 import "react-date-range/dist/styles.css";
@@ -97,7 +101,7 @@ function Header({ placeholder }) {
         </div>
       </header>
       {active && (
-        <div className="relative z-[60]" >
+        <div className="relative z-[60]">
           <p
             className="fixed right-4 -mt-2 flex cursor-pointer items-center rounded-lg border-2 bg-white px-5 py-2 text-lg font-semibold text-gray-700 shadow-md transition duration-300 ease-in-out hover:scale-105 active:scale-95 "
             onClick={() => {
@@ -121,18 +125,30 @@ function Header({ placeholder }) {
             onChange={handleSelect}
             className="sm:mx-auto"
           />
-          <div className="flex w-full max-w-lg items-center sm:mx-auto ">
-            <h2 className="flex-1 text-3xl font-semibold">No Of Guests</h2>
-            <UsersIcon className="h-5 w-5" />
-            <input
-              type="number"
-              className="w-12 pl-2 text-lg text-airbnb outline-none"
-              value={numberOfGuests}
-              min={1}
-              onChange={(event) => setNumberOfGuests(event.target.value)}
-            />
+          <div className="mx-auto flex w-full max-w-lg items-center justify-evenly space-x-28">
+            <h2 className="flex- text-3xl font-semibold">No Of Guests</h2>
+            <div className="flex items-center space-x-2">
+              <UsersIcon className="h-7 w-7 text-gray-400" />
+              <MinusCircleIcon
+                className="guest-input-button"
+                onClick={() =>
+                  numberOfGuests > 1 && setNumberOfGuests(numberOfGuests - 1)
+                }
+              />
+              <input
+                type="number"
+                className="max-w-[32px] text-center text-2xl text-airbnb outline-none"
+                value={numberOfGuests}
+                min={1}
+                onChange={(event) => setNumberOfGuests(event.target.value)}
+              />
+              <PlusCircleIcon
+                className="guest-input-button"
+                onClick={() => setNumberOfGuests(numberOfGuests + 1)}
+              />
+            </div>
           </div>
-          <div className="my-4 mx-auto flex w-full max-w-lg text-lg font-semibold">
+          <div className="space-x- my-4 mx-auto flex w-full max-w-lg justify-evenly text-lg font-semibold child:w-1/3 child:rounded-md child:py-1 child:shadow-sm child:transition child:duration-200 child:ease-in-out child-hover:scale-105 child-active:scale-95">
             <button
               onClick={() => {
                 setSearchInput("");
@@ -140,11 +156,14 @@ function Header({ placeholder }) {
                 setEndDate(new Date());
                 setNumberOfGuests(1);
               }}
-              className="flex-1 text-gray-600"
+              className="border-2 border-gray-600 border-opacity-50 text-gray-600 "
             >
               Cancel
             </button>
-            <button className="flex-1 text-airbnb" onClick={search}>
+            <button
+              className="bg-airbnb bg-opacity-90 text-white hover:bg-opacity-100 "
+              onClick={search}
+            >
               Search
             </button>
           </div>

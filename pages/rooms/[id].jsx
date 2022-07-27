@@ -86,7 +86,7 @@ function Details() {
               src={image}
               layout="fill"
               objectFit="cover"
-              className="rounded-xl transition duration-200 ease-in-out hover:opacity-80"
+              className="cursor-pointer rounded-xl transition duration-200 ease-in-out hover:opacity-80"
             />
           </div>
           {/* Middle Section */}
@@ -246,7 +246,13 @@ function Details() {
                   <ChevronDownIcon className="h-4 w-4" />
                 </div>
               </div>
-              <button className="w-full rounded-md bg-airbnb py-2 text-xs text-white transition ease-in-out hover:scale-105 active:scale-95">
+              <button
+                className={`w-full rounded-md bg-airbnb py-2 text-xs text-white transition ease-in-out hover:scale-105 active:scale-95 ${
+                  nights < 1 &&
+                  "cursor-not-allowed bg-opacity-40 hover:scale-100 active:scale-100"
+                }`}
+                disabled={nights < 1 && true}
+              >
                 Book Now
               </button>
               <div className="space-y-2">
@@ -258,12 +264,15 @@ function Details() {
                 </a>
                 <a className="flex justify-between text-xs font-normal">
                   <p className="text-gray-600 underline">Service Fee</p>
-                  <p> ${cleaningFee}</p>
+                  <p> ${nights > 1 ? cleaningFee : 0}</p>
                 </a>
               </div>
               <div className="flex justify-between border-t pt-4 text-xs font-normal">
                 <p className="text-gray-600 underline">Total Amount</p>
-                <p> ${price * nights + parseInt(cleaningFee)}</p>
+                <p>
+                  {" "}
+                  ${price * nights + (nights > 1 && parseInt(cleaningFee))}
+                </p>
               </div>
             </div>
           </div>

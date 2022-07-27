@@ -31,7 +31,10 @@ function Search({ searchResults }) {
       <main className="flex max-w-full">
         <section className="flex-1 px-6 pt-10">
           <p className="w-max rounded-md bg-gray-100 bg-opacity-40 py-2 px-4 text-xs capitalize shadow-sm">
-            300+ stays -{" "}
+            {`${filteredResults.length} ${
+              filteredResults.length > 1 ? "stays" : "stay"
+            }`}{" "}
+            -{" "}
             <span className="rounded-md bg-airbnb bg-opacity-80 py-1 px-2 text-white">
               {range}
             </span>{" "}
