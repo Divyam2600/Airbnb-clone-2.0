@@ -64,7 +64,7 @@ function Details() {
   return (
     <div className="h-screen">
       <Header placeholder={searchPlaceholder} />
-      <main className="mx-auto max-w-4xl px-2 xs:px-5 py-3">
+      <main className="mx-auto max-w-4xl px-2 py-3 xs:px-5">
         <section className="font-semibold">
           {/* Header Section */}
           <p className="text-lg">{title}</p>
@@ -185,8 +185,8 @@ function Details() {
               </div>
               <Amenities amenities={amenities} />
               <div className="space-y-5 pt-5 pb-3">
-                <div className="flex space-x-4">
-                  <div className="relative h-10 w-10 cursor-pointer md:h-12 md:w-12">
+                <div className="flex space-x-2 xs:space-x-4">
+                  <div className="relative h-8 w-11 cursor-pointer md:h-12 md:w-12 xs:h-11">
                     <Image
                       alt="hostPicture"
                       src={hostPicture}
