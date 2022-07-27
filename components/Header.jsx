@@ -56,13 +56,17 @@ function Header({ placeholder }) {
       <header className=" sticky top-0 z-50 flex grid-cols-3 justify-between space-x-1 border-b bg-white p-4  shadow-md md:px-6">
         {/* Left */}
         <Link href="/">
-          <div className="-mb-5 flex h-12 cursor-pointer items-center object-contain ">
-            <AirbnbIcon className="h-12 w-12" />
-            <AirbnbLogo className="hidden h-10 w-20 md:inline-flex" />
+          <div
+            className={`-mb-5 flex h-12 cursor-pointer items-center object-contain ${
+              session && "child:mt-3"
+            } `}
+          >
+            <AirbnbIcon className="h-16 w-16" />
+            <AirbnbLogo className="hidden h-10 w-28 md:inline-flex" />
           </div>
         </Link>
         {/* Middle */}
-        <div className="flex max-w-xs flex-grow items-center rounded-full border-2 px-2 py-1 shadow-sm md:max-w-sm">
+        <div className="flex max-w-xs flex-grow items-center rounded-full border-2 px-2 h-12 my-auto shadow-sm md:max-w-sm">
           <input
             type="text"
             className="flex-1 bg-transparent pl-2 text-gray-600 outline-none"
@@ -72,11 +76,11 @@ function Header({ placeholder }) {
             value={searchInput}
             onChange={(event) => setSearchInput(event.target.value)}
           />
-          <SearchIcon className="-mr-[2px] ml-3 h-8 w-8 cursor-pointer rounded-full bg-airbnb bg-opacity-75 p-2 text-white hover:bg-opacity-95" />
+          <SearchIcon className="-mr-[2px] ml-3 h-9 w-9 cursor-pointer rounded-full bg-airbnb bg-opacity-75 p-2 text-white hover:bg-opacity-95" />
         </div>
         {/* Right */}
         <div className="flex items-center justify-between space-x-1 text-gray-500 ">
-          <p className="hidden cursor-pointer rounded-full py-2 px-5 text-center font-semibold hover:bg-gray-200 hover:bg-opacity-40 md:inline-flex">
+          <p className="hidden cursor-pointer rounded-full py-2 px-4 text-center font-semibold hover:bg-gray-200 hover:bg-opacity-40 lg:inline-flex">
             Become A host
           </p>
           <GlobeAltIcon className="mr-1 hidden h-10 w-10 cursor-pointer rounded-full p-2 hover:bg-gray-200 hover:bg-opacity-40 sm:inline-flex" />
@@ -150,7 +154,7 @@ function Header({ placeholder }) {
               />
             </div>
           </div>
-          <div className="space-x- my-4 mx-auto flex w-full max-w-lg justify-evenly text-lg font-semibold child:w-1/3 child:rounded-md child:py-1 child:shadow-sm child:transition child:duration-200 child:ease-in-out child-hover:scale-105 child-active:scale-95">
+          <div className="space-x- my-4 mx-auto flex w-full max-w-lg select-none justify-evenly text-lg font-semibold child:w-1/3 child:rounded-md child:py-1 child:shadow-sm child:transition child:duration-200 child:ease-in-out child-hover:scale-105 child-active:scale-95">
             <button
               onClick={() => {
                 setSearchInput("");
