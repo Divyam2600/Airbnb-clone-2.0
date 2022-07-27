@@ -83,6 +83,7 @@ function Details() {
           </div>
           <div className="relative my-4 h-72 w-5/6 rounded-xl bg-black sm:h-80 lg:h-96 ">
             <Image
+              alt="place"
               src={image}
               layout="fill"
               objectFit="cover"
@@ -101,6 +102,7 @@ function Details() {
                 </div>
                 <div className="relative h-10 w-10 cursor-pointer md:h-12 md:w-12">
                   <Image
+                    alt="hostPicture"
                     src={hostPicture}
                     layout="fill"
                     className="rounded-full"
@@ -140,7 +142,7 @@ function Details() {
               </div>
               <div className="space-y-3 pt-4 pb-1">
                 <div className="relative h-5 w-24">
-                  <Image src="/promotion.webp" layout="fill" />
+                  <Image alt="promotion" src="/promotion.webp" layout="fill" />
                 </div>
                 <p className="text-xs font-normal">
                   Every booking includes free protection from Host
@@ -172,7 +174,7 @@ function Details() {
                 </span>
               </div>
               <div className="space-y-4 pt-5 pb-2">
-                <p className="text-lg">Where you'll sleep?</p>
+                <p className="text-lg">Where you&#39;ll sleep?</p>
                 <div className="w-40 space-y-1 rounded-xl border border-gray-400 border-opacity-80 p-5 text-xs">
                   <BedIcon className="mb-2 h-6 w-6 text-airbnb" />
                   Bedroom
@@ -186,6 +188,7 @@ function Details() {
                 <div className="flex space-x-4">
                   <div className="relative h-10 w-10 cursor-pointer md:h-12 md:w-12">
                     <Image
+                      alt="hostPicture"
                       src={hostPicture}
                       layout="fill"
                       className="rounded-full"

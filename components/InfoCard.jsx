@@ -80,6 +80,7 @@ function InfoCard({
     <div className="flex cursor-pointer rounded-xl border border-b border-gray-100 py-5 px-4 shadow-sm transition duration-200 ease-in-out hover:border-l-4 hover:border-l-airbnb hover:opacity-80 hover:shadow-md">
       <div className="relative h-24 w-40 flex-shrink-0 transition duration-200 ease-in-out hover:scale-105 md:h-60 md:w-80">
         <Image
+          alt="Place"
           src={image}
           layout="fill"
           objectFit="cover"

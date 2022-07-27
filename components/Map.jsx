@@ -55,6 +55,7 @@ function MapBox({ filteredResults }) {
               <div className="relative -m-3 -mb-[15px] text-xs capitalize">
                 <div className="opacity-85 relative h-32 w-44">
                   <Image
+                    alt="place"
                     src={`https://public.opendatasoft.com/explore/dataset/airbnb-listings/files/${item.fields.picture_url?.id}/300/`}
                     layout="fill"
                     className="rounded-lg"

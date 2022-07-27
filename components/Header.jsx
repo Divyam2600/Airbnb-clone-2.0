@@ -66,7 +66,7 @@ function Header({ placeholder }) {
           </div>
         </Link>
         {/* Middle */}
-        <div className="flex max-w-xs flex-grow items-center rounded-full border-2 px-2 h-12 my-auto shadow-sm md:max-w-sm">
+        <div className="my-auto flex h-12 max-w-xs flex-grow items-center rounded-full border-2 px-2 shadow-sm md:max-w-sm">
           <input
             type="text"
             className="flex-1 bg-transparent pl-2 text-gray-600 outline-none"
@@ -94,6 +94,7 @@ function Header({ placeholder }) {
             {session ? (
               <div className="relative h-10 w-10">
                 <Image
+                  alt="userImage"
                   src={session.user.image}
                   layout="fill"
                   objectFit="cover"

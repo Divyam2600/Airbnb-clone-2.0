@@ -9,9 +9,9 @@ import HairDryerIcon from "../assets/icons/HairDryerIcon";
 import IronIcon from "../assets/icons/IronIcon";
 
 function Amenities({ amenities }) {
-  amenities = amenities.split(",");
+  amenities = amenities?.split(",");
   const filteredAmenities = data.displayAmenities.filter((value) => {
-    return amenities.find((element) => {
+    return amenities?.find((element) => {
       return element === value.key;
     });
   });

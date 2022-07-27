@@ -11,7 +11,13 @@ function Custom404() {
       <Header />
       <div className="mx-auto max-w-lg px-5 pb-4">
         <div className="w-full text-center md:text-left">
-          <Image src="/error.png" height={300} width={500} objectFit="cover" />
+          <Image
+            alt="error"
+            src="/error.png"
+            height={300}
+            width={500}
+            objectFit="cover"
+          />
         </div>
         <div className="space-y-3">
           <p className="-mt-4 -mb-1 text-center text-8xl font-bold text-gray-700">
