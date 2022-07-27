@@ -111,11 +111,11 @@ function Details() {
                 </div>
               </div>
               <div className="space-y-3 pt-3">
-                <div className="flex w-11/12 items-center space-x-3 text-gray-700">
-                  <MapIcon className="h-5 w-5 text-airbnb" />
-                  <p className="flex flex-col text-sm">
+                <div className="flex items-center space-x-3 text-gray-700">
+                  <MapIcon className="h-7 w-7 text-airbnb xs:h-6 xs:w-6" />
+                  <p className="flex flex-col pl-[6px] text-xs">
                     Book Right Now
-                    <a className="mt-[2px] text-[10px] font-normal leading-4 text-gray-400">
+                    <a className="text-[10px] font-normal leading-4 text-gray-400">
                       This is one of the few places in {location}.
                     </a>
                   </p>
@@ -124,7 +124,7 @@ function Details() {
                   <StarIcon className="h-5 w-5 text-airbnb" />
                   <p className="flex flex-col text-sm">
                     Rating
-                    <a className="-mt-1 text-[10px] font-normal text-gray-400">
+                    <a className="text-[10px] font-normal leading-4 text-gray-400">
                       {star * 20}% visitors have rated this place.
                     </a>
                   </p>
@@ -133,7 +133,7 @@ function Details() {
                   <BadgeCheckIcon className="h-5 w-5 text-airbnb" />
                   <p className="flex flex-col text-sm">
                     Experienced host
-                    <a className="-mt-1 text-[10px] font-normal text-gray-400">
+                    <a className="text-[10px] font-normal leading-4 text-gray-400">
                       {hostName} has {parseInt(hostReviews, 10) + 100} reviews
                       for other places.
                     </a>
