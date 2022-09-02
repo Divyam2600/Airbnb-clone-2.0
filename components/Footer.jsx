@@ -3,7 +3,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="bottom-0 max-w-xl grid-cols-3 space-y-5 divide-y divide-gray-400 divide-opacity-70 bg-gray-200 p-4 child:mx-auto child:max-w-5xl md:grid md:gap-3 md:space-y-0 md:divide-y-0">
+    <footer className="bottom-0 grid-cols-3 space-y-5 divide-y divide-gray-400 divide-opacity-70 bg-gray-200 p-4 child:mx-auto child:max-w-5xl md:grid md:gap-3 md:space-y-0 md:divide-y-0">
       <div>
         <p className="flex-1 text-lg ">Support</p>
         <div className="grid grid-cols-3 space-y-2 text-xs capitalize child:cursor-pointer child-hover:underline md:block">
