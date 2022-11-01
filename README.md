@@ -1,15 +1,16 @@
 # Airbnb Clone 2.0
 
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
-  <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
-  <img alt="Version" src="https://img.shields.io/badge/Airbnb-Clone-brightgreen" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue?cacheSeconds=2592000" />
+  <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow" />
+  <img alt="Version" src="https://img.shields.io/badge/Airbnb-Clone%202.0-brightgreen" />
 </p>
 
 ### About The Build:
 
 This Airbnb clone has an Eye-Catching and Interactive UI with especially place search filter and MapBox integration with slick effect. Furthermore, custom Icons have been created and added.
-<br />
+
+![Template Screenshot](TemplateScreenshot.png?raw=true "Template Screenshot")
 
 Current Features :
 
@@ -87,7 +88,7 @@ TWITTER_CLIENT_BEARER_TOKEN=key_goes_here
 
 👤 **Divyam Agarwal**
 
-- Website:
+- Website: <https://divyamag.vercel.app/>
 - Github: [@Divyam2600](https://github.com/Divyam2600)
 
 ## Show your support
